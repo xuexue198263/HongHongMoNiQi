@@ -79,7 +79,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-warm-cream flex flex-col items-center px-4 py-8">
+    <div className="min-h-screen bg-white flex flex-col items-center px-4 py-8">
       {/* 用户菜单 */}
       <div className="w-full max-w-md flex justify-end mb-2">
         <UserMenu />
@@ -87,22 +87,22 @@ export default function HomePage() {
 
       {/* 标题 */}
       <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold text-coral mb-2">哄哄模拟器</h1>
-        <p className="text-soft-gray text-sm">在各种吵架场景中练习哄人，看你能哄好吗？</p>
+        <h1 className="text-3xl font-bold text-black mb-2">哄哄模拟器</h1>
+        <p className="text-black/60 text-sm">在各种吵架场景中练习哄人，看你能哄好吗？</p>
       </div>
 
       {/* 步骤指示器 */}
       <div className="flex items-center gap-3 mb-6">
-        <div className={`flex items-center gap-1.5 ${step === 1 ? 'text-coral' : 'text-soft-gray'}`}>
+        <div className={`flex items-center gap-1.5 ${step === 1 ? 'text-coral' : 'text-black/60'}`}>
           <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold ${
-            step === 1 ? 'bg-coral text-white' : 'bg-gray-200 text-gray-400'
+            step === 1 ? 'bg-coral text-white' : 'bg-gray-200 text-black'
           }`}>1</div>
           <span className="text-sm font-medium">基本设置</span>
         </div>
         <div className="w-8 h-0.5 bg-gray-200" />
-        <div className={`flex items-center gap-1.5 ${step === 2 ? 'text-coral' : 'text-soft-gray'}`}>
+        <div className={`flex items-center gap-1.5 ${step === 2 ? 'text-coral' : 'text-black/60'}`}>
           <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold ${
-            step === 2 ? 'bg-coral text-white' : 'bg-gray-200 text-gray-400'
+            step === 2 ? 'bg-coral text-white' : 'bg-gray-200 text-black'
           }`}>2</div>
           <span className="text-sm font-medium">选择头像</span>
         </div>
@@ -114,20 +114,20 @@ export default function HomePage() {
           <div className="space-y-6 animate-fade-in">
             {/* 1. 恋爱对象姓名 */}
             <div>
-              <label className="block text-sm font-semibold text-dark-gray mb-2">恋爱对象姓名</label>
+              <label className="block text-sm font-semibold text-black mb-2">恋爱对象姓名</label>
               <input
                 type="text"
                 value={partnerName}
                 onChange={(e) => setPartnerName(e.target.value)}
                 placeholder="请输入TA的名字"
                 maxLength={10}
-                className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-coral focus:outline-none transition-colors text-dark-gray bg-white"
+                className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-coral focus:outline-none transition-colors text-black bg-white"
               />
             </div>
 
             {/* 2. 恋爱对象性别 */}
             <div>
-              <label className="block text-sm font-semibold text-dark-gray mb-2">恋爱对象性别</label>
+              <label className="block text-sm font-semibold text-black mb-2">恋爱对象性别</label>
               <div className="grid grid-cols-2 gap-3">
                 {[
                   { value: 'female', label: '👩 女朋友' },
@@ -139,7 +139,7 @@ export default function HomePage() {
                     className={`py-3 px-4 rounded-xl text-sm font-medium transition-all ${
                       gender === opt.value
                         ? 'bg-coral text-white shadow-md scale-105'
-                        : 'bg-white text-dark-gray border-2 border-gray-200 hover:border-coral/50'
+                        : 'bg-white text-black border-2 border-gray-200 hover:border-coral/50'
                     }`}
                   >
                     {opt.label}
@@ -150,7 +150,7 @@ export default function HomePage() {
 
             {/* 3. 难度选择 */}
             <div>
-              <label className="block text-sm font-semibold text-dark-gray mb-2">选择难度</label>
+              <label className="block text-sm font-semibold text-black mb-2">选择难度</label>
               <div className="grid grid-cols-3 gap-3">
                 {DIFFICULTY_LEVELS.map((d) => (
                   <button
@@ -159,7 +159,7 @@ export default function HomePage() {
                     className={`py-3 px-2 rounded-xl text-center transition-all ${
                       difficulty === d.id
                         ? 'bg-coral text-white shadow-md scale-105'
-                        : 'bg-white text-dark-gray border-2 border-gray-200 hover:border-coral/50'
+                        : 'bg-white text-black border-2 border-gray-200 hover:border-coral/50'
                     }`}
                   >
                     <div className="text-lg">{d.emoji}</div>
@@ -167,14 +167,14 @@ export default function HomePage() {
                   </button>
                 ))}
               </div>
-              <p className="text-xs text-soft-gray mt-1 text-center">
+              <p className="text-xs text-black/60 mt-1 text-center">
                 {DIFFICULTY_LEVELS.find(d => d.id === difficulty)?.desc}
               </p>
             </div>
 
             {/* 4. 选择吵架场景 */}
             <div>
-              <label className="block text-sm font-semibold text-dark-gray mb-2">选择吵架场景</label>
+              <label className="block text-sm font-semibold text-black mb-2">选择吵架场景</label>
               <div className="grid grid-cols-2 gap-2">
                 {PRESET_SCENES.map((scene) => (
                   <button
@@ -183,7 +183,7 @@ export default function HomePage() {
                     className={`py-2.5 px-3 rounded-xl text-xs font-medium transition-all text-left ${
                       selectedScene === scene.id
                         ? 'bg-coral text-white shadow-md'
-                        : 'bg-white text-dark-gray border-2 border-gray-200 hover:border-coral/50'
+                        : 'bg-white text-black border-2 border-gray-200 hover:border-coral/50'
                     }`}
                   >
                     {scene.name}
@@ -191,7 +191,7 @@ export default function HomePage() {
                 ))}
               </div>
               {selectedScene && (
-                <p className="text-xs text-soft-gray mt-2 bg-white p-3 rounded-xl">
+                <p className="text-xs text-black/60 mt-2 bg-white p-3 rounded-xl">
                   {PRESET_SCENES.find(s => s.id === selectedScene)?.desc}
                 </p>
               )}
@@ -218,7 +218,7 @@ export default function HomePage() {
             {/* 返回按钮 */}
             <button
               onClick={() => setStep(1)}
-              className="flex items-center gap-1 text-sm text-soft-gray hover:text-coral transition-colors"
+              className="flex items-center gap-1 text-sm text-black/60 hover:text-coral transition-colors"
             >
               ← 返回修改设置
             </button>
@@ -226,22 +226,22 @@ export default function HomePage() {
             {/* 设置摘要 */}
             <div className="bg-white rounded-2xl p-4 shadow-sm space-y-2">
               <div className="flex justify-between text-sm">
-                <span className="text-soft-gray">姓名</span>
-                <span className="text-dark-gray font-medium">{partnerName}</span>
+                <span className="text-black/60">姓名</span>
+                <span className="text-black font-medium">{partnerName}</span>
               </div>
               <div className="flex justify-between text-sm">
-                <span className="text-soft-gray">性别</span>
-                <span className="text-dark-gray font-medium">{gender === 'female' ? '👩 女朋友' : '👨 男朋友'}</span>
+                <span className="text-black/60">性别</span>
+                <span className="text-black font-medium">{gender === 'female' ? '👩 女朋友' : '👨 男朋友'}</span>
               </div>
               <div className="flex justify-between text-sm">
-                <span className="text-soft-gray">难度</span>
-                <span className="text-dark-gray font-medium">
+                <span className="text-black/60">难度</span>
+                <span className="text-black font-medium">
                   {DIFFICULTY_LEVELS.find(d => d.id === difficulty)?.emoji} {DIFFICULTY_LEVELS.find(d => d.id === difficulty)?.label}
                 </span>
               </div>
               <div className="flex justify-between text-sm">
-                <span className="text-soft-gray">场景</span>
-                <span className="text-dark-gray font-medium">
+                <span className="text-black/60">场景</span>
+                <span className="text-black font-medium">
                   {PRESET_SCENES.find(s => s.id === selectedScene)?.name}
                 </span>
               </div>
@@ -249,7 +249,7 @@ export default function HomePage() {
 
             {/* 头像选择 */}
             <div>
-              <label className="block text-sm font-semibold text-dark-gray mb-3">
+              <label className="block text-sm font-semibold text-black mb-3">
                 选择你的{gender === 'male' ? '男友' : '女友'}头像
               </label>
               <div className="grid grid-cols-2 gap-4">
@@ -280,7 +280,7 @@ export default function HomePage() {
                         )}
                       </div>
                       <span className={`text-sm font-semibold ${
-                        avatarType === type ? 'text-coral' : 'text-dark-gray'
+                        avatarType === type ? 'text-coral' : 'text-black'
                       }`}>
                         {label}
                       </span>
@@ -318,14 +318,14 @@ export default function HomePage() {
       <div className="mt-6 flex gap-3">
         <button
           onClick={() => router.push('/blog')}
-          className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white shadow-sm hover:shadow-md transition-all text-soft-gray hover:text-coral"
+          className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white shadow-sm hover:shadow-md transition-all text-black/60 hover:text-coral"
         >
           <span className="text-lg">📖</span>
           <span className="text-sm font-medium">恋爱攻略</span>
         </button>
         <button
           onClick={() => router.push('/leaderboard')}
-          className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white shadow-sm hover:shadow-md transition-all text-soft-gray hover:text-coral"
+          className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white shadow-sm hover:shadow-md transition-all text-black/60 hover:text-coral"
         >
           <span className="text-lg">🏆</span>
           <span className="text-sm font-medium">排行榜</span>
