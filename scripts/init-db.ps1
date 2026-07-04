@@ -1,0 +1,2 @@
+$env:DATABASE_URL = "postgresql://postgres:87F0GkSNlQD5dFaL16@cp-vivid-flow-ee01495a.pg5.aidap-global.cn-beijing.volces.com:5432/postgres?sslmode=require&channel_binding=require"
+pnpm tsx scripts/init-db.ts
