@@ -52,56 +52,61 @@
   --font-serif:
     'Noto Serif SC', 'Songti SC', 'SimSun', ui-serif, Georgia, Cambria,
     'Times New Roman', Times, serif;
-  --color-coral: #3B82F6;
-  --color-coral-light: #60A5FA;
-  --color-coral-dark: #2563EB;
-  --color-cream: #F0F7FF;
-  --color-cream-dark: #E0F0FF;
-  --color-charcoal: #1E3A5F;
-  --color-soft-gray: #4A6FA5;
-  --color-anger-furious: #DC2626;
-  --color-anger-upset: #EF4444;
-  --color-anger-softening: #F59E0B;
-  --color-anger-forgiving: #10B981;
-  --color-wechat-bg: #E3F2FD;
-  --color-wechat-header: #BBDEFB;
-  --color-wechat-system-bg: #E3F2FD;
-  --color-wechat-system-text: #4A6FA5;
+  --color-coral: #FF00FF;
+  --color-coral-light: #FF66FF;
+  --color-coral-dark: #CC00CC;
+  --color-cream: #0A0A0F;
+  --color-cream-dark: #12121A;
+  --color-charcoal: #E0E0E0;
+  --color-soft-gray: #8888AA;
+  --color-anger-furious: #FF3366;
+  --color-anger-upset: #FF6699;
+  --color-anger-softening: #FFAA00;
+  --color-anger-forgiving: #00FFCC;
+  --color-wechat-bg: #0D0D15;
+  --color-wechat-header: #1A1A2E;
+  --color-wechat-system-bg: #0D0D15;
+  --color-wechat-system-text: #8888AA;
+  --color-neon-cyan: #00FFFF;
+  --color-neon-pink: #FF00FF;
+  --color-neon-purple: #9900FF;
+  --color-neon-blue: #0066FF;
+  --color-neon-green: #00FF99;
 }
 
 :root {
   --radius: 0.75rem;
-  --background: oklch(0.99 0.01 240);
-  --foreground: oklch(0.2 0.02 240);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.2 0.02 240);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.2 0.02 240);
-  --primary: oklch(0.65 0.18 240);
-  --primary-foreground: oklch(0.99 0.01 240);
-  --secondary: oklch(0.97 0.015 240);
-  --secondary-foreground: oklch(0.3 0.02 240);
-  --muted: oklch(0.96 0.01 240);
-  --muted-foreground: oklch(0.55 0.02 240);
-  --accent: oklch(0.96 0.015 240);
-  --accent-foreground: oklch(0.3 0.02 240);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.92 0.015 240);
-  --input: oklch(0.92 0.015 240);
-  --ring: oklch(0.65 0.18 240);
-  --chart-1: oklch(0.65 0.18 240);
-  --chart-2: oklch(0.6 0.12 220);
-  --chart-3: oklch(0.398 0.08 240);
-  --chart-4: oklch(0.75 0.15 195);
-  --chart-5: oklch(0.80 0.12 260);
-  --sidebar: oklch(0.985 0.005 240);
-  --sidebar-foreground: oklch(0.145 0.02 240);
-  --sidebar-primary: oklch(0.65 0.18 240);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0.01 240);
-  --sidebar-accent-foreground: oklch(0.205 0.02 240);
-  --sidebar-border: oklch(0.922 0.01 240);
-  --sidebar-ring: oklch(0.708 0.05 240);
+  --background: oklch(0.08 0.01 280);
+  --foreground: oklch(0.95 0.02 280);
+  --card: oklch(0.12 0.01 280);
+  --card-foreground: oklch(0.95 0.02 280);
+  --popover: oklch(0.12 0.01 280);
+  --popover-foreground: oklch(0.95 0.02 280);
+  --primary: oklch(0.7 0.25 300);
+  --primary-foreground: oklch(0.08 0.01 280);
+  --secondary: oklch(0.18 0.02 280);
+  --secondary-foreground: oklch(0.90 0.02 280);
+  --muted: oklch(0.15 0.01 280);
+  --muted-foreground: oklch(0.60 0.02 280);
+  --accent: oklch(0.75 0.28 195);
+  --accent-foreground: oklch(0.08 0.01 280);
+  --destructive: oklch(0.65 0.28 15);
+  --border: oklch(0.25 0.02 280);
+  --input: oklch(0.18 0.01 280);
+  --ring: oklch(0.70 0.25 300);
+  --chart-1: oklch(0.70 0.25 300);
+  --chart-2: oklch(0.75 0.28 195);
+  --chart-3: oklch(0.65 0.20 320);
+  --chart-4: oklch(0.70 0.22 220);
+  --chart-5: oklch(0.60 0.25 340);
+  --sidebar: oklch(0.10 0.01 280);
+  --sidebar-foreground: oklch(0.90 0.02 280);
+  --sidebar-primary: oklch(0.70 0.25 300);
+  --sidebar-primary-foreground: oklch(0.08 0.01 280);
+  --sidebar-accent: oklch(0.18 0.02 280);
+  --sidebar-accent-foreground: oklch(0.90 0.02 280);
+  --sidebar-border: oklch(0.25 0.02 280);
+  --sidebar-ring: oklch(0.70 0.25 300);
 }
 
 @layer base {
@@ -117,22 +122,65 @@ body {
   @apply font-sans;
 }
 
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 255, 255, 0.03) 2px,
+      rgba(0, 255, 255, 0.03) 4px
+    );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 0, 255, 0.05) 50%,
+    transparent 100%
+  );
+  animation: scanline 8s linear infinite;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+@keyframes scanline {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
 /* 自定义滚动条 */
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: #0A0A0F;
 }
 ::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 2px;
+  background: linear-gradient(180deg, #FF00FF, #00FFFF);
+  border-radius: 3px;
 }
 
 /* 愤怒值条渐变 */
 .anger-bar {
-  background: linear-gradient(90deg, #2ED573, #FFA502, #FF6348, #FF4757);
+  background: linear-gradient(90deg, #00FFCC, #FFAA00, #FF6699, #FF3366);
   transition: width 0.5s ease-out;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
 }
 
 /* 消息气泡动画 */
@@ -152,11 +200,13 @@ body {
 
 /* 选项卡片悬停效果 */
 .option-card {
-  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, border-color 0.2s ease-out;
+  border: 1px solid rgba(255, 0, 255, 0.2);
 }
 .option-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.4), 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 0, 255, 0.6);
 }
 .option-card:active {
   transform: translateY(0px) scale(0.98);
